@@ -1,0 +1,74 @@
+import React, { Component } from "react";
+import { View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { MagnifyingGlass, Heart, Package, Users} from "phosphor-react";
+import CardDestaque from "../components/Destaques_card";
+
+export default class Home extends Component {
+
+    render() {
+        return (
+            <View style={{ flex: 1, width: 375, padding: 24, paddingTop: 8, backgroundColor: 'hsla(0, 0%, 99%, 1)' }}>
+                <View style={{ top: 16 }}>
+                    {/*Titulo superior*/}
+                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <View>
+                            <Text style={styles.customTextTitle}>Olá, Arley</Text>
+                            <Text style={styles.customTextTitleSubT}>Ficamos felizes de você estar aqui!</Text>
+                        </View>
+                        <TouchableOpacity style={styles.customBtnFav}>
+                            <Heart style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)" }} />
+                        </TouchableOpacity>
+                    </View>
+
+                    {/*Campo de pesquisa*/}
+                    <View  style={{ backgroundColor: "rgba(242, 242, 242, 1)", padding: 13, borderRadius: 6, marginTop: 16, flexDirection: 'row', alignItems: 'center'  }}>
+                        <MagnifyingGlass style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)", marginRight: 8}} />
+                        <TextInput
+                            style={{fontSize: 16, lineHeight: 29, width:300}}
+                            placeholder="Pesquisar">
+                        </TextInput>
+                    </View>
+
+                    {/*Botões de navegação*/}
+                    <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 24, justifyContent: 'space-between' }}>
+                        <TouchableOpacity style={{backgroundColor: '#005EB8', flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6}}>
+                            <Package style={{ fontSize: 24, color: "rgba(252, 252, 252, 1)" }} /> <Text style={{color: '#FFFFFF', marginLeft: 10, fontSize:14, fontFamily: 'Roboto',  letterSpacing: 0.25}} >Produtos</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6, border: '1px solid #c3c3c3',}}>
+                            <Users style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)" }} /> <Text style={{color: 'rgba(0, 0, 0, 0.45)', marginLeft: 10, fontSize:14, fontFamily: 'Roboto', letterSpacing: 0.25}} >Serviços</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <CardDestaque></CardDestaque>
+                </View>
+                
+            </View>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    customTextTitle: {
+        fontFamily: 'Roboto',
+        fontSize: 20,
+        fontWeight: 500,
+        lineHeight: 28,
+        color: "rgba(0, 0, 0, 1)",
+        letterSpacing: 0.15
+    },
+    customTextTitleSubT: {
+        fontFamily: 'Roboto',
+        fontSize: 14,
+        fontWeight: 400,
+        lineHeight: 22,
+        color: "rgba(0, 0, 0, 0.7)",
+        letterSpacing: 0.25
+    },
+    customBtnFav: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 40,
+        height: 40,
+        backgroundColor: 'hsla(0, 0%, 95%, 1)',
+        borderRadius: 6
+    }
+})
