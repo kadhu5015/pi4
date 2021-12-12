@@ -1,7 +1,6 @@
-import Home from "./tela/Home";
-import Sobre from "./tela/Sobre";
-import IMCApp from "./tela/IMCApp"
-import Cadastro from "./tela/Cadastro";
+import Welcome from "./tela/Welcome";
+import Login from "./tela/Login";
+
 
 //Versão 5.x com modal
 import React from "react";
@@ -11,16 +10,11 @@ import {createStackNavigator} from '@react-navigation/stack'
 const StackPrincipal = createStackNavigator()
 const StackRaiz = createStackNavigator()
 
-import Modal from "./components/Perfil";
-import ModalResultadoIMC from "./components/ModalResultadoIMC";
-
 function StackPrincipalTela(){
     return (
         <StackPrincipal.Navigator initialRouteName='Home'>
-            <StackPrincipal.Screen name='Home' component={Home} options={{title: 'Tela inicial', headerStyle:{backgroundColor:'orange'}}}/>
-            <StackPrincipal.Screen name='Sobre' component={Sobre} options={{headerStyle:{backgroundColor:'orange'},headerTitleAlign:'center'}}/>
-            <StackPrincipal.Screen name='Cadastro' component={Cadastro} options={{headerStyle:{backgroundColor:'orange'},headerTitleAlign:'center'}}/>
-            <StackPrincipal.Screen name='Calcular' component={IMCApp} options={{headerStyle:{backgroundColor:'orange'},headerTitleAlign:'center'}}/>
+            <StackPrincipal.Screen name='Welcome' component={Welcome} options={{headerShown: false}}/>
+            <StackPrincipal.Screen name='Login' component={Login} options={{title: 'Tela inicial', headerStyle:{backgroundColor:'orange'}}}/>
         </StackPrincipal.Navigator>
     )
 }
@@ -30,8 +24,6 @@ function StackRaizTela(){
         <NavigationContainer>
             <StackRaiz.Navigator>
                 <StackRaiz.Screen name='Principal' component={StackPrincipalTela} options={{headerShown: false}}/>
-                <StackRaiz.Screen name='Perfil' component={Modal} options={{headerShown: false}}/>
-                <StackRaiz.Screen name='ModalResultadoIMC' component={ModalResultadoIMC} options={{headerShown: false}}/>
             </StackRaiz.Navigator>
         </NavigationContainer>
     )
