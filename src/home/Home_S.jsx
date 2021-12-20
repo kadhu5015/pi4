@@ -9,7 +9,7 @@ import { House, PawPrint, ShoppingBagOpen, UserCircle } from "phosphor-react";
 
 
 
-export default class Home extends Component {
+export default class HomeS extends Component {
 
     render() {
         return (
@@ -45,17 +45,16 @@ export default class Home extends Component {
 
                     {/*Botões de navegação*/}
                     <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 24, marginHorizontal: 24, justifyContent: 'space-between' }}>
-                        <TouchableOpacity style={{backgroundColor: '#005EB8', flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6}} onPress={() => this.props.navigation.navigate('Home')}>
-                            <Package style={{ fontSize: 24, color: "rgba(252, 252, 252, 1)" }} /> <Text style={{color: '#FFFFFF', marginLeft: 10, fontSize:14, fontFamily: 'Roboto',  letterSpacing: 0.25}} >Produtos</Text>
+                        
+                        <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6, border: '1px solid #c3c3c3'}} onPress={() => this.props.navigation.navigate('Home')}>
+                            <Package  style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)" }}  /> <Text style={{color: 'rgba(0, 0, 0, 0.45)', marginLeft: 10, fontSize:14, fontFamily: 'Roboto', letterSpacing: 0.25}}  >Produtos</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6, border: '1px solid #c3c3c3',}} onPress={() => this.props.navigation.navigate('Servico')}>
-                            <Users style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)" }} /> <Text style={{color: 'rgba(0, 0, 0, 0.45)', marginLeft: 10, fontSize:14, fontFamily: 'Roboto', letterSpacing: 0.25}} >Serviços</Text>
+                        
+                        <TouchableOpacity style={{backgroundColor: '#005EB8', flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6}}  onPress={() => this.props.navigation.navigate('Servico')}>
+                            <Users style={{ fontSize: 24, color: "rgba(252, 252, 252, 1)" }}/> <Text style={{color: '#FFFFFF', marginLeft: 10, fontSize:14, fontFamily: 'Roboto',  letterSpacing: 0.25}}>Serviços</Text>
                         </TouchableOpacity>
                     </View>
-                    <CardDestaque></CardDestaque>
-                    <CardVertical></CardVertical>
-                    <CardVertical_d></CardVertical_d>
-                  
+              
                 </View>
             </View>
         )
