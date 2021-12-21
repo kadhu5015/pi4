@@ -1,19 +1,20 @@
 import React, { Component } from "react";
-import { View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, TextInput, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { MagnifyingGlass, Heart, Package, Users} from "phosphor-react";
-import CardDestaque from "../components/Destaques_card";
-import CardVertical from "../components/Card_vertical_hig_ace";
-import CardVertical_d from "../components/Card_vertical_div"
 
 import { House, PawPrint, ShoppingBagOpen, UserCircle } from "phosphor-react";
+import CardDestaqueS from "../components/Destaques_card_S";
+import Card_vertical_s from "../components/Card_vertical_s"
 
-
+import banner from '../imagens/banner.png'
 
 export default class HomeS extends Component {
+    
 
     render() {
+        
         return (
-            <View style={{ flex: 1,backgroundColor: 'hsla(0, 0%, 99%, 1)', paddingBottom:100 }}>
+            <View style={{ flex: 1,backgroundColor: 'hsla(0, 0%, 99%, 1)', paddingBottom:100, overflowY:' scroll' }}>
                
                <View style={stylesBottomTab.container}>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}><House size={24} weight="fill" color="rgba(0, 94, 184, 1)" /></TouchableOpacity>
@@ -29,7 +30,7 @@ export default class HomeS extends Component {
                             <Text style={styles.customTextTitle}>Olá, Arley</Text>
                             <Text style={styles.customTextTitleSubT}>Ficamos felizes de você estar aqui!</Text>
                         </View>
-                        <TouchableOpacity style={styles.customBtnFav} onPress={() => this.props.navigation.navigate('Pet')}>
+                        <TouchableOpacity style={styles.customBtnFav}>
                             <Heart style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)" }} />
                         </TouchableOpacity>
                     </View>
@@ -38,7 +39,7 @@ export default class HomeS extends Component {
                     <View  style={{ backgroundColor: "rgba(242, 242, 242, 1)", padding: 13, borderRadius: 6, marginTop: 16, flexDirection: 'row', alignItems: 'center', marginHorizontal:24}}>
                         <MagnifyingGlass style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)", marginRight: 8}} />
                         <TextInput
-                            style={{fontSize: 16, lineHeight: 29, width:300}}
+                            style={{fontSize: 16, lineHeight: 24, width:300}}
                             placeholder="Pesquisar">
                         </TextInput>
                     </View>
@@ -54,8 +55,15 @@ export default class HomeS extends Component {
                             <Users style={{ fontSize: 24, color: "rgba(252, 252, 252, 1)" }}/> <Text style={{color: '#FFFFFF', marginLeft: 10, fontSize:14, fontFamily: 'Roboto',  letterSpacing: 0.25}}>Serviços</Text>
                         </TouchableOpacity>
                     </View>
-              
+                    <CardDestaqueS></CardDestaqueS>
+                    <Card_vertical_s></Card_vertical_s>
+
+                    <TouchableOpacity style={{ marginTop: 24, marginHorizontal: 24}}>
+                    <Image source={banner} style={{ width: 327, height: 117}} />
+                    </TouchableOpacity>
                 </View>
+
+                
             </View>
         )
     }

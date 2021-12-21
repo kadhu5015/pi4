@@ -101,7 +101,7 @@ const stylesCard = StyleSheet.create({
     customTextTitle: {
         fontFamily: 'Roboto',
         marginTop: 24,
-        marginBottom: 16,
+        marginBottom: 4,
         letterSpacing: 0.15,
         fontFamily: 'Roboto',
         fontWeight: 500,

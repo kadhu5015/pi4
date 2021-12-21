@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { View, Image, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import imagem from '../imagens/foto_dog.png'
+import imagem from '../imagens/dog.png'
 import feedback from '../imagens/feedback.svg'
 import { Heart} from "phosphor-react";
 
 
 
-export default class CardDestaque extends Component {
+export default class CardDestaqueS extends Component {
 
     render() {
 
@@ -17,45 +17,44 @@ export default class CardDestaque extends Component {
                 <ScrollView style={stylesCard.scrollView} horizontal={true} showsHorizontalScrollIndicator={false}>
                 <View style = {{flexDirection: 'row'}}>
                     
-                    <TouchableOpacity style={stylesCard.containerCard} onPress={() => this.props.navigation.navigate('Produto')}>
-                        <View>
-                            <Image source={imagem} style={{ width: 85, height: 99, marginRight: 8 }} />
-                        </View>
-
-                        <View style={{marginRight: 8}}>
-                            <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 14, lineHeight: 18, paddingTop:4 }}>Roupa para cachorro | P - XG</Text>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 10, lineHeight: 16, color: '#009739' }}>24% OFF</Text><Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 10, lineHeight: 16, color: 'rgba(0, 0, 0, 0.45)' }}> PETLOVE</Text>
-                            </View>
-                            <View>
-                                <Image source={feedback} style={{ width: 69, height: 14, marginTop: 1 }} />
-                            </View>
-                            <View >
-                                <Text style={{ fontFamily: 'Roboto', fontSize: 12, letterSpacing: 0.4, color: 'rgba(0, 0, 0, 0.6)', lineHeight: 16, marginTop: 8 }}>R$ 130,60</Text>
-                                <Text style={{ color: '#009739', fontSize: 22, fontFamily: 'Roboto', lineHeight: 24, letterSpacing: 0.15, fontWeight: 700 }}>R$ 99,00</Text>
-                            </View>
-                        </View>
-                        <Heart style={{fontSize: '24', color: "rgba(0, 0, 0, 0.45)", marginLeft: 1}}/>
-                    </ TouchableOpacity>
                     <TouchableOpacity style={stylesCard.containerCard}>
                         <View>
-                            <Image source={imagem} style={{ width: 85, height: 99, marginRight: 8 }} />
+                            <Image source={imagem} style={{ width: 132, height: 116, marginRight: 16 }} />
                         </View>
 
                         <View style={{marginRight: 8}}>
-                            <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 14, lineHeight: 18, paddingTop:4 }}>Roupa para cachorro | P - XG</Text>
+                            <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 14, lineHeight: 18, marginTop: 8 }}>Banho em cachorro{"\n"}médio</Text>
                             <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 10, lineHeight: 16, color: '#009739' }}>24% OFF</Text><Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 10, lineHeight: 16, color: 'rgba(0, 0, 0, 0.45)' }}> PETLOVE</Text>
+                                <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 10, lineHeight: 18, color: 'rgba(0, 0, 0, 0.45)' }}> PETLOVE</Text>
                             </View>
                             <View>
                                 <Image source={feedback} style={{ width: 69, height: 14, marginTop: 1 }} />
                             </View>
                             <View >
-                                <Text style={{ fontFamily: 'Roboto', fontSize: 12, letterSpacing: 0.4, color: 'rgba(0, 0, 0, 0.6)', lineHeight: 16, marginTop: 8 }}>R$ 130,60</Text>
-                                <Text style={{ color: '#009739', fontSize: 22, fontFamily: 'Roboto', lineHeight: 24, letterSpacing: 0.15, fontWeight: 700 }}>R$ 99,00</Text>
+                                <Text style={{ color: 'hsla(209, 100%, 36%, 1)', fontSize: 18, fontFamily: 'Roboto', lineHeight: 32, letterSpacing: 0.15, fontWeight: 700 }}>Ver preços</Text>
                             </View>
                         </View>
-                        <Heart style={{fontSize: '20', color: "rgba(0, 0, 0, 0.45)", marginLeft: 1}}/>
+                        <Heart style={{fontSize: '24', color: "rgba(0, 0, 0, 0.45)", marginLeft: 1, marginTop:8}}/>
+                    </ TouchableOpacity>
+
+                    <TouchableOpacity style={stylesCard.containerCard}>
+                        <View>
+                            <Image source={imagem} style={{ width: 132, height: 116, marginRight: 8 }} />
+                        </View>
+
+                        <View style={{marginRight: 8}}>
+                            <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 14, lineHeight: 18, marginTop: 8 }}>Banho em cachorro{"\n"}médio</Text>
+                            <View style={{ flexDirection: 'row' }}>
+                                <Text style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: 10, lineHeight: 18, color: 'rgba(0, 0, 0, 0.45)' }}> PETLOVE</Text>
+                            </View>
+                            <View>
+                                <Image source={feedback} style={{ width: 69, height: 14, marginTop: 1 }} />
+                            </View>
+                            <View >
+                                <Text style={{ color: '#009739', fontSize: 18, fontFamily: 'Roboto', lineHeight: 32, letterSpacing: 0.15, fontWeight: 700 }}>Ver preços</Text>
+                            </View>
+                        </View>
+                        <Heart style={{fontSize: '24', color: "rgba(0, 0, 0, 0.45)", marginLeft: 1, marginTop:8}}/>
                     </ TouchableOpacity>
                    
                 </View>
@@ -89,13 +88,10 @@ const stylesCard = StyleSheet.create({
     },
     containerCard: {
         flexDirection: 'row',
-        paddingBottom: 12,
-        paddingTop: 12,
-        paddingLeft: 10,
-        paddingRight: 10,
         borderRadius: 6,
         backgroundColor: '#F2F2F2',
-        marginRight: 8
+        marginRight: 8,
+        paddingRight: 8
         
     }
 

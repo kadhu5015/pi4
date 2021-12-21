@@ -1,3 +1,4 @@
+//Rotas
 import Welcome from "./telas_externas/Welcome";
 import Login from "./telas_externas/Login";
 import Cadastro from "./telas_externas/Cadastro";
@@ -6,6 +7,9 @@ import HomeS from "./home/Home_S"
 import Carrinho from "./carrinho/Carrinho";
 import Area_pet from "./pets/Area_pet";
 import Perfil from "./Perfil_usuario/Perfil";
+import Produto from "./home/Produto";
+
+
 //Versão 5.x com modal
 import React from "react";
 import {NavigationContainer} from '@react-navigation/native'
@@ -27,6 +31,8 @@ function StackPrincipalTela(){
             <StackPrincipal.Screen name='Pet' component={Area_pet} options={{headerShown: false, title: 'Pet'}}/>
             <StackPrincipal.Screen name='Carrinho' component={Carrinho} options={{headerShown: false, title: 'Carrinho'}}/>
             <StackPrincipal.Screen name='Perfil' component={Perfil} options={{headerShown: false, title: 'Perfil'}}/>
+            <StackPrincipal.Screen name='Produto' component={Produto} options={{headerShown: false, title: 'Produto'}}/>
+        
         </StackPrincipal.Navigator>
     )
 }

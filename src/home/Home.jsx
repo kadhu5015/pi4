@@ -8,10 +8,10 @@ import CardVertical_d from "../components/Card_vertical_div"
 import { House, PawPrint, ShoppingBagOpen, UserCircle } from "phosphor-react";
 
 
-
 export default class Home extends Component {
 
     render() {
+     
         return (
             <View style={{ flex: 1,backgroundColor: 'hsla(0, 0%, 99%, 1)', paddingBottom:100 }}>
                
@@ -38,7 +38,7 @@ export default class Home extends Component {
                     <View  style={{ backgroundColor: "rgba(242, 242, 242, 1)", padding: 13, borderRadius: 6, marginTop: 16, flexDirection: 'row', alignItems: 'center', marginHorizontal:24}}>
                         <MagnifyingGlass style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)", marginRight: 8}} />
                         <TextInput
-                            style={{fontSize: 16, lineHeight: 29, width:300}}
+                            style={{fontSize: 16, lineHeight: 24, width:300}}
                             placeholder="Pesquisar">
                         </TextInput>
                     </View>
@@ -48,11 +48,12 @@ export default class Home extends Component {
                         <TouchableOpacity style={{backgroundColor: '#005EB8', flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6}} onPress={() => this.props.navigation.navigate('Home')}>
                             <Package style={{ fontSize: 24, color: "rgba(252, 252, 252, 1)" }} /> <Text style={{color: '#FFFFFF', marginLeft: 10, fontSize:14, fontFamily: 'Roboto',  letterSpacing: 0.25}} >Produtos</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6, border: '1px solid #c3c3c3',}} onPress={() => this.props.navigation.navigate('Servico')}>
+                        <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center', justifyContent:'center', height:40, width:156, borderRadius: 6, border: '1px solid #c3c3c3'}} onPress={() => this.props.navigation.navigate('Servico')}>
                             <Users style={{ fontSize: 24, color: "rgba(0, 0, 0, 0.45)" }} /> <Text style={{color: 'rgba(0, 0, 0, 0.45)', marginLeft: 10, fontSize:14, fontFamily: 'Roboto', letterSpacing: 0.25}} >Serviços</Text>
                         </TouchableOpacity>
                     </View>
-                    <CardDestaque></CardDestaque>
+                    
+                    <CardDestaque navigation={this.props.navigation}></CardDestaque>
                     <CardVertical></CardVertical>
                     <CardVertical_d></CardVertical_d>
                   
@@ -61,6 +62,7 @@ export default class Home extends Component {
         )
     }
 }
+
   
   const stylesBottomTab = StyleSheet.create({
     container: {
