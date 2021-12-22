@@ -59,7 +59,7 @@ export default class HomeS extends Component {
                     <Card_vertical_s></Card_vertical_s>
 
                     <TouchableOpacity style={{ marginTop: 24, marginHorizontal: 24}}>
-                    <Image source={banner} style={{ width: 327, height: 117}} />
+                    <Image source={banner} style={{ width: 327, height: 117, borderRadius: 6}} />
                     </TouchableOpacity>
                 </View>
 

@@ -10,7 +10,7 @@ export default class CardVertical extends Component {
     render() {
         return (
             <View style={stylesCard.section,{marginHorizontal: 24}}>
-                <Text style={stylesCard.customTextTitle} > Acessórios e higiene</Text>
+                <Text style={stylesCard.customTextTitle} >Acessórios e higiene</Text>
                 <ScrollView style={stylesCard.scrollView} horizontal={true} showsHorizontalScrollIndicator={false}>
                 <View style = {{flexDirection: 'row'}}>
 
@@ -101,7 +101,7 @@ const stylesCard = StyleSheet.create({
     customTextTitle: {
         fontFamily: 'Roboto',
         marginTop: 24,
-        marginBottom: 4,
+        marginBottom: 6,
         letterSpacing: 0.15,
         fontFamily: 'Roboto',
         fontWeight: 500,

@@ -31,7 +31,7 @@ export default class Produto extends Component {
                 <View style={{ marginTop: 24, padding: 12, borderRadius:6, flexDirection: 'row', marginHorizontal: 24, alignItems:'center', backgroundColor: 'rgba(242, 242, 242, 1)' }}>
                     <CurrencyCircleDollar size={32} color="#009739" style={{marginRight: 15}}/> 
                     <View style={{marginRight: 52}}>
-                        <Text style={{fontWeight:500, fontFamily: 'Roboto', color: 'rgba(0, 0, 0, 0.45)', letterSpacing: 0.1, fontSize: 14, marginRight: 15}}>R$ 130,60</Text> <Text style={{fontWeight:900, fontFamily: 'Roboto', color: 'rgba(0, 0, 0, 0.80)', letterSpacing: 0.25, fontSize: 34 }}>R$ 99,00</Text>
+                        <Text style={{fontWeight:500, fontFamily: 'Roboto', color: 'rgba(0, 0, 0, 0.45)', letterSpacing: 0.1, fontSize: 14, marginRight: 15, textDecoration: 'line-through'}}>R$ 130,60</Text> <Text style={{fontWeight:900, fontFamily: 'Roboto', color: 'rgba(0, 0, 0, 0.80)', letterSpacing: 0.25, fontSize: 34 }}>R$ 99,00</Text>
                     </View>
                     <Text style={{color: 'rgba(0, 151, 57, 1)', fontFamily: 'Roboto', fontSize: 14, fontWeight:500, marginBottom: 40}}> 24% OFF</Text>
                 </View>    
@@ -44,7 +44,7 @@ export default class Produto extends Component {
                         <TouchableOpacity style={styles.itens_tam_nao_clicados}><Text style={{color: 'rgba(0, 0, 0, 0.6)', fontSize:16}}>G</Text></TouchableOpacity>
                         <TouchableOpacity style={styles.itens_tam_nao_clicados}><Text style={{color: 'rgba(0, 0, 0, 0.6)', fontSize:16}}>GG</Text></TouchableOpacity>
                         <TouchableOpacity style={styles.itens_tam_nao_clicados}><Text style={{color: 'rgba(0, 0, 0, 0.6)', fontSize:16}}>XG</Text></TouchableOpacity>
-                        <TouchableOpacity style={styles.itens_tam_nao_clicados}><Text style={{color: 'rgba(0, 0, 0, 0.6)', fontSize:16}}>XXG</Text></TouchableOpacity>
+                        
                     </ScrollView>
                 </View>
 

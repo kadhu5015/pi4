@@ -10,7 +10,7 @@ export default class CardVertical extends Component {
     render() {
         return (
             <View style={stylesCard.section,{marginHorizontal: 24}}>
-                <Text style={stylesCard.customTextTitle} > Diversão</Text>
+                <Text style={stylesCard.customTextTitle} >Diversão</Text>
                 <ScrollView style={stylesCard.scrollView} horizontal={true} showsHorizontalScrollIndicator={false}>
                     <View style={{ flexDirection: 'row' }}>
 

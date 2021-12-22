@@ -31,7 +31,7 @@ export default class CardDestaque extends Component {
                                 <Image source={feedback} style={{ width: 69, height: 14, marginTop: 1 }} />
                             </View>
                             <View >
-                                <Text style={{ fontFamily: 'Roboto', fontSize: 12, letterSpacing: 0.4, color: 'rgba(0, 0, 0, 0.6)', lineHeight: 16, marginTop: 8 }}>R$ 130,60</Text>
+                                <Text style={{ fontFamily: 'Roboto', fontSize: 12, letterSpacing: 0.4, color: 'rgba(0, 0, 0, 0.6)', lineHeight: 18, marginTop: 8, textDecoration: 'line-through' }}>R$ 130,60</Text>
                                 <Text style={{ color: '#009739', fontSize: 22, fontFamily: 'Roboto', lineHeight: 24, letterSpacing: 0.15, fontWeight: 700 }}>R$ 99,00</Text>
                             </View>
                         </View>
@@ -51,7 +51,7 @@ export default class CardDestaque extends Component {
                                 <Image source={feedback} style={{ width: 69, height: 14, marginTop: 1 }} />
                             </View>
                             <View >
-                                <Text style={{ fontFamily: 'Roboto', fontSize: 12, letterSpacing: 0.4, color: 'rgba(0, 0, 0, 0.6)', lineHeight: 16, marginTop: 8 }}>R$ 130,60</Text>
+                                <Text style={{ fontFamily: 'Roboto', fontSize: 12, letterSpacing: 0.4, color: 'rgba(0, 0, 0, 0.6)', lineHeight: 16, marginTop: 8, textDecoration: 'line-through' }}>R$ 130,60</Text>
                                 <Text style={{ color: '#009739', fontSize: 22, fontFamily: 'Roboto', lineHeight: 24, letterSpacing: 0.15, fontWeight: 700 }}>R$ 99,00</Text>
                             </View>
                         </View>
@@ -68,7 +68,7 @@ export default class CardDestaque extends Component {
 const stylesCard = StyleSheet.create({
     scrollView:{
         flex:1,
-        width: 335
+        width: 337
       
     },
     section: {
@@ -91,7 +91,7 @@ const stylesCard = StyleSheet.create({
         flexDirection: 'row',
         paddingBottom: 12,
         paddingTop: 12,
-        paddingLeft: 10,
+        paddingLeft: 6,
         paddingRight: 10,
         borderRadius: 6,
         backgroundColor: '#F2F2F2',

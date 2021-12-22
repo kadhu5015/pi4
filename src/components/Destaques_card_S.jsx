@@ -51,7 +51,7 @@ export default class CardDestaqueS extends Component {
                                 <Image source={feedback} style={{ width: 69, height: 14, marginTop: 1 }} />
                             </View>
                             <View >
-                                <Text style={{ color: '#009739', fontSize: 18, fontFamily: 'Roboto', lineHeight: 32, letterSpacing: 0.15, fontWeight: 700 }}>Ver preços</Text>
+                                <Text style={{ color: 'hsla(209, 100%, 36%, 1)', fontSize: 18, fontFamily: 'Roboto', lineHeight: 32, letterSpacing: 0.15, fontWeight: 700 }}>Ver preços</Text>
                             </View>
                         </View>
                         <Heart style={{fontSize: '24', color: "rgba(0, 0, 0, 0.45)", marginLeft: 1, marginTop:8}}/>
