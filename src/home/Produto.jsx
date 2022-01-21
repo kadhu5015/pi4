@@ -54,7 +54,7 @@ export default class Produto extends Component {
                 </View>
 
                 <View style={{ width: 327, height: 120, justifyContent: 'center', margin:24 }} >
-                    <TouchableOpacity style={styles.customBtnBG1} /*onPress={() => this.props.navigation.navigate('Home')}*/>
+                    <TouchableOpacity style={styles.customBtnBG1} onPress={() => this.props.navigation.navigate('Carrinho')}>
                     < ShoppingBagOpen size={24} color="#FFFFFF" style={{marginRight: 10}}/>
                     <Text style={styles.customBtnText}>COLOCAR NA SACOLA</Text>
                     </TouchableOpacity>

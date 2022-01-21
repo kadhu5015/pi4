@@ -8,7 +8,7 @@ import Carrinho from "./carrinho/Carrinho";
 import Area_pet from "./pets/Area_pet";
 import Perfil from "./Perfil_usuario/Perfil";
 import Produto from "./home/Produto";
-
+import MetodoP from "./carrinho/MetodoP"
 
 //Versão 5.x com modal
 import React from "react";
@@ -22,7 +22,7 @@ const StackRaiz = createStackNavigator()
 
 function StackPrincipalTela(){
     return (
-        <StackPrincipal.Navigator initialRouteName='Welcome'>
+        <StackPrincipal.Navigator initialRouteName='Carrinho'>
             <StackPrincipal.Screen name='Welcome' component={Welcome} options={{headerShown: false, title: 'Welcome'}}/>
             <StackPrincipal.Screen name='Login' component={Login} options={{headerShown: false, title: 'Entrar'}}/>
             <StackPrincipal.Screen name='Cadastro' component={Cadastro} options={{headerShown: false, title: 'Cadastro'}}/>
@@ -32,7 +32,8 @@ function StackPrincipalTela(){
             <StackPrincipal.Screen name='Carrinho' component={Carrinho} options={{headerShown: false, title: 'Carrinho'}}/>
             <StackPrincipal.Screen name='Perfil' component={Perfil} options={{headerShown: false, title: 'Perfil'}}/>
             <StackPrincipal.Screen name='Produto' component={Produto} options={{headerShown: false, title: 'Produto'}}/>
-        
+            <StackPrincipal.Screen name='MetodoP' component={MetodoP} options={{headerShown: false, title: 'Metodo de pagamento'}}/>
+
         </StackPrincipal.Navigator>
     )
 }
