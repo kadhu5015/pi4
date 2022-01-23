@@ -9,6 +9,7 @@ import Area_pet from "./pets/Area_pet";
 import Perfil from "./Perfil_usuario/Perfil";
 import Produto from "./home/Produto";
 import MetodoP from "./carrinho/MetodoP"
+import Fim from "./carrinho/Fim"
 
 //Versão 5.x com modal
 import React from "react";
@@ -33,7 +34,7 @@ function StackPrincipalTela(){
             <StackPrincipal.Screen name='Perfil' component={Perfil} options={{headerShown: false, title: 'Perfil'}}/>
             <StackPrincipal.Screen name='Produto' component={Produto} options={{headerShown: false, title: 'Produto'}}/>
             <StackPrincipal.Screen name='MetodoP' component={MetodoP} options={{headerShown: false, title: 'Metodo de pagamento'}}/>
-
+            <StackPrincipal.Screen name='Fim' component={Fim} options={{headerShown: false, title: 'Fim'}}/>
         </StackPrincipal.Navigator>
     )
 }

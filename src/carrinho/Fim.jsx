@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { View, Button, Text, StyleSheet, Image, TouchableOpacity, TextInput } from 'react-native';
 import { House, PawPrint, ShoppingBagOpen, UserCircle, CurrencyCircleDollar } from "phosphor-react";
-import imagem1 from '../imagens/progresso2.png'
+import imagem1 from '../imagens/progresso3.png'
+import motoboy from '../imagens/motoboy.png'
 
 export default class MetodoPagamento extends Component {
 
@@ -11,51 +12,30 @@ export default class MetodoPagamento extends Component {
 
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: 375, marginTop: 5, paddingHorizontal: 24 }}>
                     <View>
-                        <Text style={styles.customTextTitle}>Método de pagamento</Text>
-                        <Text style={styles.customTextTitleSubT}>Agora escolha a melhor forma de pagamento.</Text>
+                        <Text style={styles.customTextTitle}>Parabéns!</Text>
+                        <Text style={styles.customTextTitleSubT}>Seu comprovante foi enviado para seu email, <br/>veja na sua caixa de mensagem.</Text>
                     </View>
                 </View>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center', marginVertical: 24 }}>
-                    <Image source={imagem1} style={{ width: 250, height: 40 }} />
+                    <Image source={imagem1} style={{ width: 250, height: 40, marginBottom:50 }} />
+                    <Image source={motoboy} style={{ width: 280, height: 200}} />
+
                 </View>
 
-                <View style={{ marginHorizontal: 24, padding: 12, borderRadius: 6, flexDirection: 'row', alignItems: 'center', backgroundColor: 'rgba(242, 242, 242, 1)' }}>
-                    <CurrencyCircleDollar size={32} color="#009739" style={{ marginRight: 15 }} />
-                    <View style={{ marginRight: 52 }}>
-                        <Text style={{ fontWeight: 500, fontFamily: 'Roboto', color: 'rgba(0, 0, 0, 0.45)', letterSpacing: 0.1, fontSize: 14, marginRight: 15 }}>Valor total</Text> <Text style={{ fontWeight: 900, fontFamily: 'Roboto', color: 'rgba(0, 0, 0, 0.80)', letterSpacing: 0.25, fontSize: 24 }}>R$ 115,00</Text>
-                    </View>
+                <View style={{width:337}}>
+                    <Text style={styles.customTextTitleSubT2}>Seu pedido já está sendo encaminhado para sua residência, agora pedimos que aguarde</Text>
                 </View>
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 24, marginHorizontal: 24, justifyContent: 'space-between' }}>
-                    <TouchableOpacity style={{ backgroundColor: '#005EB8', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: 40, width: 156, borderRadius: 6 }}>
-                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontFamily: 'Roboto', letterSpacing: 0.25 }} >Cartão de crédito</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: 40, width: 156, borderRadius: 6, border: '1px solid #c3c3c3' }}>
-                        <Text style={{ color: 'rgba(0, 0, 0, 0.45)', fontSize: 14, fontFamily: 'Roboto', letterSpacing: 0.25 }} >Boleto bancário</Text>
-                    </TouchableOpacity>
-                </View>
 
                 <View style={{ flexDirection: 'column', justifyContent: "space-between", height: 134, marginBottom: 32, marginHorizontal: 24, marginTop: 16 }}>
-                    <TextInput
-                        style={{ backgroundColor: "hsla(0, 0%, 95%, 1)", padding: 18, borderRadius: 12, marginBottom: 16 }}
-                        placeholder="Número do cartão">
-                    </TextInput>
-                    <TextInput
-                        style={{ backgroundColor: "hsla(0, 0%, 95%, 1)", padding: 18, borderRadius: 12, marginBottom: 16 }}
-                        placeholder="Nome completo">
-                    </TextInput>
-                    <TextInput
-                        style={{ backgroundColor: "hsla(0, 0%, 95%, 1)", padding: 18, borderRadius: 12, marginBottom: 16 }}
-                        placeholder="Data de validade">
-                    </TextInput>
-                    <TextInput
-                        style={{ backgroundColor: "hsla(0, 0%, 95%, 1)", padding: 18, borderRadius: 12, marginBottom: 16 }}
-                        placeholder="CVV">
-                    </TextInput>
+
                     <View>
-                    <TouchableOpacity style={styles.customBtnBG1} onPress={() => this.props.navigation.navigate('Fim')}>
-                        <Text style={styles.customBtnText}>FINALZAR COMPRA</Text>
+                    <TouchableOpacity style={styles.customBtnBG1} onPress={() => this.props.navigation.navigate('Home')}>
+                        <Text style={styles.customBtnText}>VER OUTROS PRODUTOS</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.customBtnBG2} onPress={() => this.props.navigation.navigate('MetodoP')}>
+                        <Text style={styles.customBtnText2}>VER MINHAS COMPRAS</Text>
                     </TouchableOpacity>
                 </View>
                 </View>
@@ -114,6 +94,17 @@ const styles = StyleSheet.create({
         color: "rgba(0, 0, 0, 0.7)",
         letterSpacing: 0.25
     },
+    customTextTitleSubT2: {
+        fontFamily: 'Roboto',
+        fontSize: 14,
+        fontWeight: 400,
+        lineHeight: 22,
+        color: "rgba(0, 0, 0, 0.7)",
+        letterSpacing: 0.25,
+        textAlign: 'center',
+        paddingLeft:20,
+        paddingTop: 40
+    },
     customBtnBG1: {
         fontFamily: 'Roboto',
         height: 52,
@@ -126,11 +117,31 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         letterSpacing: 1.25
     },
+    customBtnBG2: {
+        fontFamily: 'Roboto',
+        height: 52,
+        marginTop: 16,
+        justifyContent: 'center',
+        alignItems: 'center',
+        //backgroundColor: "#FFFFFF",
+        paddingHorizontal: 30,
+        paddingVertical: 5,
+        borderRadius: 12,
+        letterSpacing: 1.25,
+        borderWidth: 2,
+        borderColor:"#005EB8",
+    },
     customBtnText: {
         fontSize: 14,
         lineHeight: 1.2,
         fontWeight: '500',
         color: "#fff",
+    },
+    customBtnText2: {
+        fontSize: 14,
+        lineHeight: 1.2,
+        fontWeight: '500',
+        color: "#005EB8",
     },
 })
 
