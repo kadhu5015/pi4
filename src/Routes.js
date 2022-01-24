@@ -23,7 +23,7 @@ const StackRaiz = createStackNavigator()
 
 function StackPrincipalTela(){
     return (
-        <StackPrincipal.Navigator initialRouteName='Carrinho'>
+        <StackPrincipal.Navigator initialRouteName='Welcome'>
             <StackPrincipal.Screen name='Welcome' component={Welcome} options={{headerShown: false, title: 'Welcome'}}/>
             <StackPrincipal.Screen name='Login' component={Login} options={{headerShown: false, title: 'Entrar'}}/>
             <StackPrincipal.Screen name='Cadastro' component={Cadastro} options={{headerShown: false, title: 'Cadastro'}}/>

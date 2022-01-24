@@ -105,7 +105,7 @@ export default class Carrinho extends Component {
                     </TouchableOpacity>
                 </View>
 
-                <View style={{ marginVertical: 24, marginHorizontal: 24 }}>
+                <View style={{ marginVertical: 16, marginHorizontal: 24 }}>
                     <Text style={{ fontFamily: 'Roboto', fontSize: 16, lineHeight: 22, fontWeight: 500, marginBottom: 16, letterSpacing: 0.15, marginBottom: 4, color: 'hsla(0, 0%, 0%, 1)' }}>
                         Local para entrega
                     </Text>

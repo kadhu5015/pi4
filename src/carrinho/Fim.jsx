@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
         paddingVertical: 5,
         borderRadius: 12,
         letterSpacing: 1.25,
-        borderWidth: 2,
+        borderWidth: 1,
         borderColor:"#005EB8",
     },
     customBtnText: {
